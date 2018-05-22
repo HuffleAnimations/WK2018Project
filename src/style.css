@@ -1,0 +1,35 @@
+header{
+    text-align: center;
+}
+
+.formLabel{
+    width: 3cm;
+    display: inline-block;
+}
+
+.formRow{
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.button{
+    margin-bottom: 10px;
+    display: block;
+    text-align: right;
+}
+
+.flag{
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    background-color: lightgray;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.landName{
+    margin-bottom: 4;
+    margin-top: 0;
+}
