@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Stadions</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="resources/stadions/stadions.js">
+    </script>
     <script>
         function myMap(){
             var mapOptions ={
@@ -11,10 +14,37 @@
                 mapTypeId: google.maps.MapTypeId.HYBRID
             }
             var map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
+
+            for(let i in stadions){
+                let stadion = stadions[i];
+                let marker = new google.maps.Marker({
+                    position: {lat: stadion.lat, lng: stadion.long},
+                    map: map,
+                    title: stadion.name,
+                    icon: {
+                        url: 'resources/icon_stadion.png',
+                        scaledSize: new google.maps.Size(32,32)
+                    }
+                });
+                let infowindow = new google.maps.InfoWindow({
+                    content: '<div>' +
+                            '<div><img src="' + stadion.img + '" height="200"></div>' +
+                            '<div><span>Name: </span><span>'+stadion.name+'</span></div>' +
+                            '<div><span>City: </span><span>'+stadion.city+'</span></div>' +
+                            '<div><span>Cap: </span><span>'+stadion.cap+'</span></div>' +
+                            '</div>'
+                });
+                marker.addListener("click", function () {
+                    infowindow.open(map,marker);
+                })
+
+            }
+
         }
     </script>
 </head>
 <body>
+    <a href="index.html"><header><img src="resources/logo_wk_2018.png" width="400"></header></a>
     <div id="googleMap" style="width: 100%;height: 900px;"></div>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbVGz-bNd5PufY895dyOdoSYJW8mD3KGo&callback=myMap"></script>
 </body>

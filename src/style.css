@@ -33,3 +33,34 @@ header{
     margin-bottom: 4;
     margin-top: 0;
 }
+
+#ploegen{
+    background: url("resources/homepage/ploegen.jpg");
+}
+
+#opstelling{
+    background: url("resources/homepage/opstelling.jpg");
+
+}
+
+#stadions{
+    background: url("resources/homepage/stadion.jpeg");
+
+}
+
+#simulator{
+    background: url("resources/homepage/simulatie.jpg");
+
+}
+
+.home{
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+}
+
+.homeDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
