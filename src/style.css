@@ -1,5 +1,53 @@
+.indexHeader{
+    text-align: center;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    margin: 0;
+}
+
+.headerImage{
+    border-bottom-left-radius: 1cm;
+    border-bottom-right-radius: 1cm;
+    width: 500px;
+    background-color: white;
+    display: inline-block;
+    box-shadow: 0 0 1cm black;
+}
+
 header{
     text-align: center;
+    padding: 0;
+}
+
+#tijd{
+    text-align: center;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#tijdBox{
+    background-color: black;
+    display: inline-block;
+    padding: 1cm 0;
+    width: 400px;
+    border-top-left-radius: 1cm;
+    border-top-right-radius: 1cm;
+    border: 4px #333 solid;
+}
+
+#tijdText{
+    font-size: 20px;
+    margin-top: -30px;
+}
+
+#klok{
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: -30px;
 }
 
 .formLabel{
@@ -36,31 +84,47 @@ header{
 
 #ploegen{
     background: url("resources/homepage/ploegen.jpg");
+    background-size: cover;
 }
 
 #opstelling{
     background: url("resources/homepage/opstelling.jpg");
-
+    background-size: cover;
+    background-position: center;
+    color: black;
 }
 
 #stadions{
     background: url("resources/homepage/stadion.jpeg");
-
+    background-size: cover;
+    background-position: 40%;
 }
 
 #simulator{
     background: url("resources/homepage/simulatie.jpg");
-
+    background-size: cover;
+    background-position: 40%;
+    color: black;
 }
 
 .home{
     margin: 0;
     padding: 0;
     flex-grow: 1;
+    background-size: contain, contain;
+    text-decoration: none;
+    text-align: center;
+    font-size: 32px;
+    color: white;
+    font-weight: bold;
+    line-height: 400px;
 }
 
 .homeDiv{
     display: flex;
     flex-direction: row;
     align-items: stretch;
+    height: 100%;
+    width: 100%;
+    margin: 0;
 }

@@ -4,16 +4,37 @@
     <meta charset="UTF-8">
     <title>WK 2018</title>
     <link rel="stylesheet" href="style.css">
+    <script language="JavaScript">
+        function updateTime()
+        {
+            let current = new Date();
+            let target = new Date(2018, 06, 14, 17, 00, 00);
+
+            let diff = target.getTime() - current.getTime();
+            let diffDate = new Date(diff);
+
+            document.getElementById("klok").innerText = diffDate.getDate() + "d " + diffDate.getHours() + "u " +
+                diffDate.getMinutes() + "m " + diffDate.getSeconds() + "s";
+        }
+
+        window.addEventListener("load", updateTime);
+        window.setInterval(updateTime, 1000);
+    </script>
 </head>
-<body style="height: 100%">
-    <header><img src="resources/logo_wk_2018.png" width="400"></header>
+<body style="height: 100%; margin: 0;">
+    <header class="indexHeader"><div class="headerImage"><img src="resources/logo_wk_2018.png" width="400"></div></header>
     <div class="homeDiv">
-        <a href="ploegen.html" id="ploegen" class="home">ploegen</a>
-        <a href="opstelling.html" id="opstelling" class="home">opstelling</a>
-        <a href="stadion.html" id="stadions" class="home">stadions</a>
-        <a href="simulator.html" id="simulator" class="home">simulator</a>
+        <a href="ploegen.html" id="ploegen" class="home">Ploegen</a>
+        <a href="opstelling.html" id="opstelling" class="home">Opstelling</a>
+        <a href="stadion.html" id="stadions" class="home">Stadions</a>
+        <a href="simulator.html" id="simulator" class="home">Simulator</a>
     </div>
 
-    <div>tijd</div>
+    <div id="tijd">
+        <div id="tijdBox">
+            <div id="tijdText">Openingswedstrijd</div>
+            <div id="klok">00:00:00</div>
+        </div>
+    </div>
 </body>
 </html>
